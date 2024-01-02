@@ -1,0 +1,199 @@
+html{
+    overflow: hidden;
+}
+body{
+    margin: 14%;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:repeat;
+}
+#whole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#center{
+    display: flex;
+    position: relative;
+}
+#center p{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 900;
+font-size: 150px;
+margin: 0;
+padding: 0 10px 0 10px;
+}
+.f-2-p{
+    color: #ff00ef;
+}
+.f-0-p{
+    color: #ffbbbb;
+}
+.s-2-p{
+    color:  #b0fff5;
+}
+.f-3-p{
+    color: #ff30bf;
+}
+.f-4-p{
+    color: #ff30bf;
+}
+
+.balloon {
+  display:inline-block;
+   width:120px;
+  height:145px;
+  background:hsl(117.1deg 79.86% 62.35%);
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 18px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+
+.balloon:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(117.1deg 79.86% 62.35%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balloon:after {
+    display: inline-block;
+    top: 153px;
+    position: absolute;
+    height: 85px;
+    width: 2px;
+    margin: 0 auto;
+    content: "";
+    left: 59px;
+    background: rgb(104 18 241 / 73%);
+}
+.f-3{
+    position: absolute;
+    left: 360px;
+    top: -578px;
+    animation: moveballoon3 10s ;
+}
+.f-4{
+    position: absolute;
+    left: 360px;
+    animation: moveballoon2 10s ;
+}
+
+.b-contain{
+    position: absolute;
+    top: -800px;
+    left: 340px;
+    animation: moveballoon 10s ;
+}
+@keyframes moveballoon{
+    0%{
+        left: 950px;
+        top: -201px;
+    }
+    50%{
+        left: 480px;
+        top: -201px;
+    }
+    75%{
+        left: 340px;
+        top: -201px;
+    }
+    100%{
+        top: -800px;
+        left: 340px;
+    }
+}
+@keyframes moveballoon2{
+    0%{
+        left: 950px;
+    }
+    50%{
+        left: 480px;
+    }
+    75%{
+        left: 480px;
+    }
+    100%{
+        left: 360px;
+    }
+}
+@keyframes moveballoon3{
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 0;
+    }
+    75%{
+        top: 0;
+    }
+    100%{
+        top:-578px ;
+    }
+}
+#center{
+    display: flex;
+    animation: center1 15s ;
+    opacity:0%;
+}
+.hnp{
+    display: flex;
+    animation: hnp1 16s ;
+    position: absolute;
+    opacity:100%;
+}
+.hnp p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    color: #fff800;
+    text-align: center;
+    text-shadow: 6px 9px 0px black;
+}
+@keyframes hnp1{
+    0%{
+        opacity: 0%;
+    }
+    25%{
+        opacity: 0%;
+    }
+    50%{
+        opacity:0%;
+    }
+        75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity:100%;
+    }
+    
+}
+@keyframes center1{
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 100%;
+    }
+    50%{
+        opacity:100%;
+    }
+        75%{
+        opacity: 100%;
+    }
+    100%{
+        opacity:0%;
+    }
+}
